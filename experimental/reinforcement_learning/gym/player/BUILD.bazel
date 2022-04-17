@@ -1,0 +1,11 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "player",
+    srcs = [
+        "__init__.py",
+        "__player.py",
+        "__random_player.py",
+    ],
+    visibility = ["//:__subpackages__"],
+)

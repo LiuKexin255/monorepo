@@ -2,8 +2,7 @@
 
 load("@python3_sdk//:defs.bzl", "interpreter")
 load("@rules_python//python:pip.bzl", "pip_parse")
-
-requirements_lock = "//third_party/python:requirements_lock.txt"
+load(":defs.bzl", "requirements_lock")
 
 def install():
     pip_parse(
