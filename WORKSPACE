@@ -10,7 +10,7 @@ download_archive()
 # 安装 python 工具
 load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
-python_version = "3.10"
+python_version = "3.8"
 
 python_register_toolchains(
     name = "python3_sdk",
