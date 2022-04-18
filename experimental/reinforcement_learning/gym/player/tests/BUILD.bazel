@@ -1,0 +1,14 @@
+load("//tools/rules/python:defs.bzl", "py_test")
+
+py_test(
+    name = "random_player_test",
+    srcs = [
+        "random_player_test.py",
+    ],
+    args = [
+        "-v ",
+    ],
+    deps = [
+        "//experimental/reinforcement_learning/gym/player",
+    ],
+)

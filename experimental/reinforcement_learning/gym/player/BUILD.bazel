@@ -1,0 +1,14 @@
+load("//tools/rules/python:defs.bzl", "py_library", "requirement")
+
+py_library(
+    name = "player",
+    srcs = [
+        "__init__.py",
+        "__player.py",
+        "__random_player.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        requirement("numpy"),
+    ],
+)
