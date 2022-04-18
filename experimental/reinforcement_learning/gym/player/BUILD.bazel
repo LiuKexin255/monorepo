@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_library")
+load("//tools/rules/python:defs.bzl", "py_library", "requirement")
 
 py_library(
     name = "player",
@@ -8,4 +8,7 @@ py_library(
         "__random_player.py",
     ],
     visibility = ["//:__subpackages__"],
+    deps = [
+        requirement("numpy"),
+    ],
 )
